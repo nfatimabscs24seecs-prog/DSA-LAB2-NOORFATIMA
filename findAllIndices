@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+//function to find the indices
+void findAllIndices(int arr[], int size, int key){
+    bool found =false;
+    cout<<"Indices of "<<key<<":";
+    for(int i=0;i<size;i++){
+        if(arr[i]=key){
+            cout<<i<<" ";
+            found=true;
+        }
+    }
+    if(!found){
+        cout<<"The key is not found!";
+    }
+    cout<<endl;
+}
+
+int main(){
+    //case1:Multiple Occurrences
+    int arr1[]={2,1,4,5,2,};
+    findAllIndices(arr1,5,2);
+
+    //case2:Key not present
+    int arr2[]={8,9,1,2,4};
+    findAllIndices(arr2,5,7);
+
+    //empty array
+    int arr3[2]={};
+    findAllIndices(arr3,2,4);
+}
